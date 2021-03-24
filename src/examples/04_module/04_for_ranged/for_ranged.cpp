@@ -18,7 +18,7 @@ t
 @param string str
 
 */
-void loop_string_w_index(std::string str)
+void loop_string_w_index(const std::string& str)
 {
     for(decltype(str.size()) i=0; i < str.size(); ++i)
     {
@@ -38,12 +38,14 @@ e
 s
 t
 */
-void loop_string_w_for_range(std::string str)
+void loop_string_w_for_range(const std::string& str)
 {
     for(auto s: str)
     {
-        cout<<s<<"\n";
+        s = 'a';
+        //cout<<s<<"\n";
     }
+    
 }
 
 
