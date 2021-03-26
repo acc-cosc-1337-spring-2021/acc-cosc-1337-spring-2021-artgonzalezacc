@@ -5,8 +5,9 @@ using std::cout;
 
 int main()
 {
-	BankAccount account;//variable-an instance of BankAccount object in memory
-	cout<<"Balance: "<<account.get_balance()<<"\n";
+	BankAccount account = get_account(100);//variable-an instance of BankAccount object in memory
+	
+	display_account(account);
 
 	cout<<"Deposit $50\n";
 	account.deposit(50);

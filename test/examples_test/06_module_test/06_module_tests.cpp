@@ -69,3 +69,30 @@ TEST_CASE("Test bank account withdraw with amount greater than balance")
 	account.withdraw(51);
 	REQUIRE(account.get_balance() == 50);	
 }
+
+TEST_CASE("Test new bank account balance is 100")
+{
+	BankAccount account(100);
+
+	REQUIRE(account.get_balance() == 100);
+}
+
+TEST_CASE("Test bank account deposit with begin balance 100")
+{
+	BankAccount account(100);
+
+	REQUIRE(account.get_balance() == 100);
+
+	account.deposit(50);
+	REQUIRE(account.get_balance() == 150);
+}
+
+TEST_CASE("Test bank account withdraw with begin balance 100")
+{
+	BankAccount account(100);
+
+	REQUIRE(account.get_balance() == 100);
+
+	account.withdraw(50);
+	REQUIRE(account.get_balance() == 50);
+}
