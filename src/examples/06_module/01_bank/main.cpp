@@ -1,39 +1,32 @@
+#include "atm.h"
+#include "bank_account.h"
+#include "savings_account.h"
+#include "checking_account.h"
+
 #include<iostream>
 using std::cout; using std::cin;
 
-#include "atm.h"
-#include "bank_account.h"
+#include<memory>
+using std::unique_ptr; using std::make_unique;
 
 int main()
 {
-	BankAccount a1(100);
-	BankAccount a2(200);
-	BankAccount account = a1 + a2;//get_account(100);//variable-an instance of BankAccount object in memory
-	cin>>account;
-	/*char choice;
+	unique_ptr<SavingsAcount>  savings0 = make_unique<SavingsAcount>();
+	cout<<"Savings Balance: "<<savings0->get_balance()<<"\n";
 	
-	do
-	{
-		ATM atm;
+	unique_ptr<SavingsAcount> savings1 = make_unique<SavingsAcount>(1000);
+	cout<<"Savings Balance: "<<savings1->get_balance()<<"\n";
+	cout<<"Savings interest: "<<savings1->get_interest_earned()<<"\n\n";
 
-		atm.scan_card();
-		atm.display_balance();
-		cout<<"Continue? y or n";
-		cin>>choice;
+	CheckingAccount checking(100);
+	cout<<"Checking Balance: "<<checking.get_balance()<<"\n\n";
 
-	}while(choice == 'y' || choice == 'Y');*/
-
-	cout<<account;
-	friend_display_balance(account);
-	display_account(account);
-
-	cout<<"Deposit $50\n";
-	account.deposit(50);
-	cout<<"Balance: "<<account.get_balance()<<"\n";
-
-	cout<<"Withdraw $10\n";
-	account.withdraw(10);
-	cout<<"Balance: "<<account.get_balance()<<"\n";
+	//pointers
+	BankAccount* a = new BankAccount(50);
+	SavingsAcount* b = new SavingsAcount(500);
+	
+	
+	
 
 	return 0;
 }

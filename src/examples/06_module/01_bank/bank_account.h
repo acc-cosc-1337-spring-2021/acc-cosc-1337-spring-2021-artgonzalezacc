@@ -36,8 +36,9 @@ public://access specifier
     void deposit(int amount);
     void withdraw(int amount);
     static int get_bank_balance(){return bank_balance;}
-private:
+protected:
     int balance{0};//1 customer's balance
+private:
     static int bank_balance;//all the bank's customer balances
 };
 
