@@ -8,6 +8,7 @@ class CheckingAccount: public BankAccount
 public:
     CheckingAccount(){}   
     CheckingAccount(int b) : BankAccount(b){}
+    int get_balance()const override{return balance + 10; }
 };
 
 

@@ -7,6 +7,11 @@ void BranchBank::update_balance(int b)
     BankAccount::bank_balance += b;
 }
 
+int BankAccount::get_balance()const
+{
+    return balance;
+}
+
 void BankAccount::deposit(int amount)
 { 
     if(amount > 0)
@@ -50,11 +55,11 @@ std::ostream& operator<<(std::ostream& out, const BankAccount& a)
     return in;
  }
 
-BankAccount operator+(const BankAccount& a1, const BankAccount& a2)
+/*BankAccount operator+(const BankAccount& a1, const BankAccount& a2)
 {
     BankAccount account(a1.balance + a2.balance);
     return account;
-}
+}*/
 
 //FREE FUNCTIONS DEFINITIONS
 void display_account(const BankAccount& account)
@@ -62,8 +67,8 @@ void display_account(const BankAccount& account)
     std::cout<<"Display Account--Balance is: "<<account.get_balance()<<"\n";
 }
 
-BankAccount get_account(int amount)
+/*BankAccount get_account(int amount)
 {
     BankAccount account(amount);
     return account;
-}
+}*/

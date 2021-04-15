@@ -5,17 +5,17 @@ using std::cout;
 
 ATM::ATM()
 {
+  /*  accounts.push_back(BankAccount(get_balance_from_DB()));
     accounts.push_back(BankAccount(get_balance_from_DB()));
     accounts.push_back(BankAccount(get_balance_from_DB()));
     accounts.push_back(BankAccount(get_balance_from_DB()));
-    accounts.push_back(BankAccount(get_balance_from_DB()));
-    accounts.push_back(BankAccount(get_balance_from_DB()));
+    accounts.push_back(BankAccount(get_balance_from_DB()));*/
 }
 
 void ATM::display_balance()const
 {  
-    BankAccount account = accounts[customer_index];
-    cout<<"ATM Balance: "<<account.get_balance()<<"\n";
+    /*BankAccount account = accounts[customer_index];
+    cout<<"ATM Balance: "<<account.get_balance()<<"\n";*/
 }
 
 void ATM::scan_card()
