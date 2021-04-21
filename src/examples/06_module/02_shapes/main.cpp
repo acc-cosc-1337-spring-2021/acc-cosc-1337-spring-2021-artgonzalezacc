@@ -23,6 +23,10 @@ int main()
 	circles[0].draw();
 	circles[1].draw();
 	circles[2].draw();
+	std::cout<<"\n\n";
+
+	Circle* ptr = circles;
+	ptr->draw();	
 
 	return 0;
 }
