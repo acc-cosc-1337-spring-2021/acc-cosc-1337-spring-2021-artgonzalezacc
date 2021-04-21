@@ -17,17 +17,12 @@ using std::vector;
 
 int main() 
 {
-	vector<unique_ptr<Shape>> shapes;
-	unique_ptr<Shape> line = make_unique<Line>();
-	unique_ptr<Shape> circle = make_unique<Circle>();
+	const int SIZE = 3;
+	Circle circles[SIZE];//CREATE a circles array
 
-	shapes.push_back(std::move(line));
-	shapes.push_back(std::move(circle));
-
-	for(auto& shape: shapes )
-	{
-		shape->draw();
-	}
+	circles[0].draw();
+	circles[1].draw();
+	circles[2].draw();
 
 	return 0;
 }
