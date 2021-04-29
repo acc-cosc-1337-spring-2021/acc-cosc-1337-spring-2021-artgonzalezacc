@@ -42,3 +42,13 @@ TEST_CASE("Test overwriting an existing class with a copy")
 
 	REQUIRE(v[0] != v1[0]);
 }
+
+TEST_CASE("Test empty vector pushback")
+{
+	Vector v;
+	v.Pushback(2);
+
+	REQUIRE(v.Capacity() == 8);
+	REQUIRE(v.Size() == 1);
+	REQUIRE(v[0] ==  2);
+}
