@@ -52,3 +52,32 @@ TEST_CASE("Test empty vector pushback")
 	REQUIRE(v.Size() == 1);
 	REQUIRE(v[0] ==  2);
 }
+
+TEST_CASE("Test non-empty vector pushback")
+{
+	Vector v(3);
+	REQUIRE(v.Size() == 0);
+	REQUIRE(v.Capacity() == 3);
+
+	v.Pushback(3);
+
+	REQUIRE(v.Size() == 1);
+	REQUIRE(v.Capacity() == 3);
+}
+
+TEST_CASE("Test vector default multiplier doubles memory")
+{
+	Vector v(3);
+	v.Pushback(1);
+	v.Pushback(99);
+	v.Pushback(50);
+	REQUIRE(v[1] == 99);
+	REQUIRE(v.Size() == 3);
+	REQUIRE(v.Capacity() == 3);
+
+	v.Pushback(25);
+	REQUIRE(v[3] == 25);
+	REQUIRE(v.Capacity() == 6);
+	REQUIRE(v.Size() == 4);
+
+}
