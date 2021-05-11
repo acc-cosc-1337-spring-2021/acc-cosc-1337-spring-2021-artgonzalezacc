@@ -5,13 +5,12 @@
 int main ()
 {	
 
-  const int SIZE = 1000000;
+  const int SIZE = 100000;
   int* list = new int[SIZE];
-  populate_array(list, SIZE, false);
-
+  populate_array(list, SIZE, true);
+  std::cout<<"function executing...: \n";
   std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
 
-  std::cout<<"function executing...: \n";
   //100000,250000,500000,1000000
   //linear_search(list, SIZE, -5);
   //10000,100000,200000
