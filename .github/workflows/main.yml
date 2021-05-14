@@ -3,6 +3,16 @@ on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+        - name: "Ubuntu Latest GCC" 
+        - arrtfact: "Linux.tar.xz"
+        - os: ubuntu-latest
+        - build_type: "Release"
+        - cc: "gcc"
+        - cxx: "g++"
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
