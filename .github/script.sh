@@ -4,5 +4,5 @@ mkdir -p ../build;
 cd ../build; 
 cmake ../acc-cosc-1337-spring-2021-artgonzalezacc/; 
 make; 
-cd src/homework/tic_tac_toe; 
-./hw_tic_tac_toe_exe -s;
+cd ../src/classwork_test/09_assign_test; 
+./ex_09_tests -s;
