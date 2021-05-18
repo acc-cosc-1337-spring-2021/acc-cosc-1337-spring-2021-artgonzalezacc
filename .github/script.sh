@@ -4,5 +4,6 @@ mkdir -p ../build;
 cd ../build; 
 cmake ../acc-cosc-1337-spring-2021-artgonzalezacc/; 
 make; 
+pwd;
 cd ../src/classwork_test/09_assign_test; 
 ./ex_09_tests -s;
