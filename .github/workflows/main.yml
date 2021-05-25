@@ -28,6 +28,12 @@ jobs:
       - name: Build
         shell: bash
         run: |
-          chmod +x "${GITHUB_WORKSPACE}/.github/script.sh"
+          chmod +x "${GITHUB_WORKSPACE}/.github/build.sh"
           # run script
-          "${GITHUB_WORKSPACE}/.github/script.sh"
+          "${GITHUB_WORKSPACE}/.github/build.sh"
+      - name: Tests
+        shell: bash
+        run: |
+          chmod +x "${GITHUB_WORKSPACE}/.github/unit_tests.sh"
+          # run script
+          "${GITHUB_WORKSPACE}/.github/unit_tests.sh"
