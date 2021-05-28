@@ -12,4 +12,5 @@ cd src/examples/01_module/01_hello_world; <-- this statement tells the operating
 ./ex_01_01_exe  <--- in the 01_module folder find the CMakeLists.txt file find the add_executable command and you'll find the name ex_01_01_exe.
 
 To run other programs determine which folder example or homework to run and follow the procedure above to modify the run command.
+test
 
